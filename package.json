@@ -1,0 +1,25 @@
+{
+  "name": "pug_getting_started",
+  "version": "1.0.0",
+  "description": "getting started with pug(jade)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acgyiyo/Pug_getting_started.git"
+  },
+  "keywords": [
+    "pug"
+  ],
+  "author": "acgyiyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acgyiyo/Pug_getting_started/issues"
+  },
+  "homepage": "https://github.com/acgyiyo/Pug_getting_started#readme",
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}
