@@ -1,8 +1,82 @@
+mixin userInfo(user)
+    .user-id= user.id
+    .user-login= user.login
+    div
+        .name= user.name
+        .age= user.age
+
 doctype html
 html
-    head
-        title Welcome to PUG
+    include includes/head
     body
         h1 I'm using PUG
 
+    - const userObj = {id: 535,login: 'alcuervo', name: 'Alejandro', age: 27 }
+    
+    +userInfo(userObj)
+        
+
+    p#idForP hello there!
+    p.class-for-p nothing here
+    #idForDiv.classForDiv I'm a div!!
+    |
+
+    |
+    |
+    input(type="hidden" value="input")
+    a(href="#" onClick="redirect()") redirect
+    |q
+    |
+    - var algo=2
+    form(
+        method="post"
+        onSubmit="send()"
+        class="form1"
+        id= algo
+    )
+
+    - var num1 = 1
+    - let class2 = 'class2'
+    input(id=num1, class=class2)
+
+    - var total = 2 * 2 + 3
+    - var text1 = "text one"
+    p the total is #{total}
+    span= text1
+    
+    - var user = {authorised: true}
+    .row
+        if user.authorised
+            p welcome back!!
+        else
+            p log in 
+
+    - const orderStatus = '1'
+    case orderStatus
+        when '0'
+            p your order has been taked
+        when '1'
+            p your order is in transit
+        when '2'
+            p your order has been completed
+
+    - var n = 0;
+    ul
+        while (n<=4)
+            li= n++
+
+    
+    - const arr = [50, 105, 293, 98]
+    ul
+        each n, i in arr
+            li= n + '-' + i
+
+    -const obj = {'juan': 32,'miguel':44, 'sebas':20}
+    ol
+        for val, ind in obj 
+            li= ind + ' : ' + val
+
+    
+
+    
 

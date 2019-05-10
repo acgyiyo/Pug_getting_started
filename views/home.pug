@@ -1,0 +1,60 @@
+mixin userInfo(user)
+    .dv-user=user.name
+    .dv-login=user.login
+
+doctype
+html
+    head
+        script
+            include ../views/js/jsExample.js
+
+        title pug
+    body
+        h1#idH1.class-h1
+        h2.class-h2
+        div
+        #div1
+        .class-div1
+            input.class-input1(type="hidden" id="input1")
+
+        - var div2="idDiv2"
+        - var par = 'text2'
+        div= div2
+            p este es el texto: #{par}
+
+        - var login = {loggin: false}
+
+        if login.loggin
+            p bienvenido
+        else
+            p tu necesitas entrar
+
+        - const estadoPedido = '0'
+
+        case estadoPedido
+            when '0'
+                p recibido
+            when '1'
+                p enviado
+            when '2'
+                p finalizado 
+
+    - var n = 0;
+    ul
+        while (n<=4)
+            li= n++
+
+    - const arra = [0,44,78,274]
+
+    ul 
+        each val, ind in arra 
+            li= arra[ind]
+
+    -let userInfo={name:'Alejo', login:'alcuervo'}
+
+    +userInfo(userInfo)
+
+    -userInfo.name='Alejandro'
+
+    +userInfo(userInfo)
+

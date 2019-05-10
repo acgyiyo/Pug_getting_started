@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/acgyiyo/Pug_getting_started#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "pug": "^2.0.3"
   }
 }
